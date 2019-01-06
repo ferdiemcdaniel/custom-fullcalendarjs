@@ -1,0 +1,19 @@
+.dateNumber{
+    padding-top: 18px;
+    padding-bottom: 18px;
+    text-align: center;
+}
+
+.dateProg{
+    margin: 0 auto;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+td.fc-day.fc-widget-content{
+ position: relative;
+ text-align:center;
+}
