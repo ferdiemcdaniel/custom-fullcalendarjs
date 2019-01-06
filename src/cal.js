@@ -16,17 +16,21 @@ $(function() {
         navLinks: true, // can click day/week names to navigate views
         editable: true,
         eventLimit: true, // allow "more" link when too many events
+        fixedWeekCount: false,
         dayRender: function(date, cell){
             return $(cell).load("/src/elements/cell.html",null,function(){
                 $(this).find("h1").text(date.date());
-                console.log($(this).find('div#circle'));
-                $(this).find('div.dateProg').circleProgress({
-                    value: 0.75,
-                    size: 80,
-                    fill: {
-                        gradient: ["red", "orange"]
-                    }
-                });
+                if(!$(this).hasClass('fc-other-month')) {
+                    $(this).find('div.dateProg').circleProgress({
+                        value: 0.75,
+                        size: 80,
+                        fill: {
+                            gradient: ["red", "orange"]
+                        }
+                    });
+                }else{
+                    $(this).find("h1").addClass('dateGray');
+                }
             });
         },
         events: [

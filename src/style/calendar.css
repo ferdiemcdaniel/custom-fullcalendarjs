@@ -1,7 +1,14 @@
 .dateNumber{
-    padding-top: 18px;
-    padding-bottom: 18px;
-    text-align: center;
+    margin: 0 auto;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.dateGray{
+    color: gray;
 }
 
 .dateProg{
@@ -14,6 +21,6 @@
 }
 
 td.fc-day.fc-widget-content{
- position: relative;
- text-align:center;
+    position: relative;
+    text-align:center;
 }
